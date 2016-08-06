@@ -1,0 +1,25 @@
+{
+  "name": "iahsp-2017",
+  "homepage": "https://github.com/stagedhomes/iahsp-2017",
+  "authors": [
+    "Duane Leem <duaneleem@alumni.ggu.edu>"
+  ],
+  "description": "",
+  "main": "",
+  "keywords": [
+    "Home",
+    "Staging"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}

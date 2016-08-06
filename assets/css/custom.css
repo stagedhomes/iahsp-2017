@@ -1,6 +1,33 @@
-.height-100p { height: 100%; }
-
 .darken-main-parallax {
     opacity: 0.8;
     background; black;
 }
+
+
+/* ===========================================================================
+    Vertical Timeline
+=========================================================================== */
+.cbp_tmtimeline > li .cbp_tmtime span:last-child {
+    font-size: 2em;
+}
+
+
+/* ===========================================================================
+    Footer
+=========================================================================== */
+footer .column.logo {
+    background: white;
+}
+
+
+/* ===========================================================================
+    Common Components
+=========================================================================== */
+.space-top-20 { margin-top: 20px; }
+.space-top-40 { margin-top: 40px; }
+.space-bottom-20 { margin-bottom: 20px; }
+
+.height-100p { height: 100%; }
+
+.text-white { color: #ffffff; }
+.text-bold { font-weight: bold; }
