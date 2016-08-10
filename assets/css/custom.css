@@ -11,6 +11,9 @@
     font-size: 2em;
 }
 
+#sponsorLevels td {
+    vertical-align: middle;
+}
 
 /* ===========================================================================
     Footer
@@ -27,7 +30,9 @@ footer .column.logo {
 .space-top-40 { margin-top: 40px; }
 .space-bottom-20 { margin-bottom: 20px; }
 
+.width-500p { width: 500px; }
 .height-100p { height: 100%; }
 
+.text-valign-middle { vertical-align: middle !important; }
 .text-white { color: #ffffff; }
 .text-bold { font-weight: bold; }
