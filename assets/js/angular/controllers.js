@@ -2,6 +2,7 @@
     angular.module("iahsp2017")
         .controller("ctrlSendEmail", ["$scope", "$http", "factorySendEmail", "vcRecaptchaService", function($scope, $http, factorySendEmail, vcRecaptchaService){
             $scope.contactDetails = factorySendEmail.contact;
+            var btnSubmit = document.getElementById("submit");
 
             /* ==================================================================
                 Form Functions
@@ -12,13 +13,12 @@
                     "email": null,
                     "subject": null,
                     "message": null
-                } // contact
+                }; // contact
 
-                // Reset the Send button.
-                $('#submit').text("Send Message");
-                $('#submit').removeClass("btn-success");
-                $('#submit').removeClass("btn-danger");
-                $('#submit').addClass("btn-default");
+                btnSubmit.innerHTML = "Send Message";
+                btnSubmit.classList.remove("btn-success");
+                btnSubmit.classList.remove("btn-danger");
+                btnSubmit.classList.add("btn-primary");
             }; // clearForm()
 
             $scope.fnSendForm = function() {
@@ -29,9 +29,10 @@
                     $scope.contactDetails.googleResponse = vcRecaptchaService.getResponse();
 
                     // Put up some sort of loading sign.
-                    $('#submit').text('Please Wait...');
-                    $('#submit').removeClass('btn-default').addClass('btn-info');
-                    $("#submit").prop('disabled', true);
+                    btnSubmit.innerHTML = "Please Wait...";
+                    btnSubmit.classList.remove("btn-primary");
+                    btnSubmit.classList.add("btn-info");
+                    btnSubmit.disabled = true;
 
                     // send POST data
                     $http.post("https://www.leemtek.com/forms/stagedhomes/iahsp2017", $scope.contactDetails)

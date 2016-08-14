@@ -2,6 +2,7 @@
     angular.module("iahsp2017")
         .factory("factorySendEmail", [function() {
             var $facSendEmail = [];
+            var btnSubmit = document.getElementById("submit");
 
             // Store all contents provided by guest.
             $facSendEmail.contact = {
@@ -11,17 +12,18 @@
                 "message": "Just a test email."
             }; // contact
 
+            // update submit button to indicate success
             $facSendEmail.fnSendSuccessDOM = function() {
-                // update submit button to indicate success
-                $('#submit').text('Email Sent');
-                $('#submit').removeClass('btn-info').addClass('btn-success');
-                $("#submit").prop('disabled', true);
+                btnSubmit.innerHTML = "Email Sent";
+                btnSubmit.classList.add("btn-success");
+                btnSubmit.disabled = true;
             }; // fnSendSuccessDOM
 
+            // update submit button to indicate an error
             $facSendEmail.fnSendErrorDOM = function() {
-                // update submit button to indicate an error
-                $('#submit').text('Error Sending');
-                $('#submit').removeClass('btn-info').addClass('btn-danger');
+                btnSubmit.innerHTML = "Error Sending";
+                btnSubmit.classList.remove("btn-info");
+                btnSubmit.classList.add("btn-danger");
             }; // fnSendErrorDOM()
 
             // Used to add a proper date string (testing purposes).
