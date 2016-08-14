@@ -99,9 +99,9 @@
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 1 -->
-                            <div class="tp-caption large_bold_white customin customout"
-                                data-x="center" data-hoffset="0"
-                                data-y="200"
+                            <div id="revolution-layer-1" class="tp-caption large_bold_white customin customout"
+                                data-x="" data-hoffset=""
+                                data-y="" data-voffset=""
                                 data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
                                 data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                                 data-speed="1000"
@@ -113,7 +113,7 @@
                             </div>
 
                             <!-- LAYER NR. 2 -->
-                            <div class="tp-caption largegreenbg customin customout"
+                            <div id="revolution-layer-2" class="tp-caption largegreenbg customin customout"
                                 data-x="center" data-hoffset="0"
                                 data-y="center" data-voffset="-40"
                                 data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
@@ -127,7 +127,7 @@
                             </div>
 
                             <!-- LAYER NR. 3 -->
-                            <div class="tp-caption small_light_white customin customout"
+                            <div id="revolution-layer-3" class="tp-caption small_light_white customin customout"
                                 data-x="center" data-hoffset="20"
                                 data-y="bottom" data-voffset="-150"
                                 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
@@ -136,15 +136,16 @@
                                 data-start="1000"
                                 data-easing="Power4.easeInOut"
                                 data-endspeed="500"
-                                data-endeasing="Power4.easeInOut"
-                                style="z-index: 4; white-space: normal; width: 95%; font-size: x-large;">
+                                data-endeasing="Power4.easeInOut">
 
-                                The International Association of Home Staging Professionals® (IAHSP®) is excited to host this
-                                high level educational event for top Home Staging business owners worldwide!  Join colleagues to learn, share
-                                and grow a successful business that has longevity and profitability.  We have planned two power-packed days
-                                full of vital information as well as opportunities for you to network with colleagues from all over.  Our
-                                vendor-sponsors play a key role in our business success and we are excited to welcome them to the EXPO portion
-                                of our event.  Sign up NOW to secure your spot!
+                                <strong>
+                                    The International Association of Home Staging Professionals® (IAHSP®) is excited to host this
+                                    high level educational event for top Home Staging business owners worldwide!  Join colleagues to learn, share
+                                    and grow a successful business that has longevity and profitability.  We have planned two power-packed days
+                                    full of vital information as well as opportunities for you to network with colleagues from all over.  Our
+                                    vendor-sponsors play a key role in our business success and we are excited to welcome them to the EXPO portion
+                                    of our event.  Sign up NOW to secure your spot!
+                                </strong>
                             </div>
 
                         </li>
@@ -168,12 +169,12 @@
 
                     <article class="row">
                         <div class="col-md-6">
-                            <div class="owl-carousel controlls-over" data-plugin-options='{"items": 1, "singleItem": true, "navigation": true, "pagination": false, "transitionStyle":"fadeUp"}'>
-                                <div>
-                                    <img class="img-responsive" src="assets/images/jeff-lewis-1.jpg" width="555" height="311" alt="Jeff Lewis" />
-                                </div>
+                            <div class="owl-carousel controlls-over" data-plugin-options='{"items": 2, "singleItem": true, "navigation": true, "pagination": false, "transitionStyle":"fadeUp", autoplay:true, autoplayTimeout:5000, autoplayHoverPause:false}'>
                                 <div>
                                     <img class="img-responsive" src="assets/images/jeff-lewis-2.jpg" width="555" height="311" alt="Jeff Lewis" />
+                                </div>
+                                <div>
+                                    <img class="img-responsive" src="assets/images/jeff-lewis-1.jpg" width="555" height="311" alt="Jeff Lewis" />
                                 </div>
                             </div>
                         </div>
@@ -266,7 +267,7 @@
                         <i class="fa fa-star"></i>
                     </div>
 
-                    <div class="lead">
+                    <div class="lead" style="color: black;">
                         <p>
                             The International Association of Home Staging Professionals® (IAHSP®) is the original industry association
                             that since 1999 has set the standards of excellence and ethics.  We believe education is paramount to the
@@ -321,7 +322,7 @@
                                             <p>
                                                 $455
                                                 <span>Now through Sept 30, 2016</span>
-                                                <a href="http://www.regonline.com/iahsp2017conference" class="btn btn-primary btn-sm">REGISTER</a>
+                                                <a href="http://www.regonline.com/iahsp2017conference" target="_blank" class="btn btn-primary btn-sm">REGISTER</a>
                                             </p>
                                         </div>
 
@@ -331,7 +332,7 @@
                                             <p>
                                                 $495
                                                 <span>Oct 1, 2016 – Jan 8, 2017</span>
-                                                <a href="http://www.regonline.com/iahsp2017conference" class="btn btn-primary btn-sm">REGISTER</a>
+                                                <a href="http://www.regonline.com/iahsp2017conference" target="_blank" class="btn btn-primary btn-sm">REGISTER</a>
                                             </p>
                                         </div>
 
@@ -340,7 +341,7 @@
                                             <p>
                                                 $575
                                                 <span>Jan 9 – Feb 1</span>
-                                                <a href="http://www.regonline.com/iahsp2017conference" class="btn btn-primary btn-sm">REGISTER</a>
+                                                <a href="http://www.regonline.com/iahsp2017conference" target="_blank" class="btn btn-primary btn-sm">REGISTER</a>
                                             </p>
                                         </div>
                                     </div>
@@ -353,7 +354,7 @@
                                             <p>
                                                 $595*
                                                 <span>Now through Sept 30, 2016</span>
-                                                <a href="http://www.regonline.com/iahsp2017conference" class="btn btn-primary btn-sm">REGISTER</a>
+                                                <a href="http://www.regonline.com/iahsp2017conference" target="_blank" class="btn btn-primary btn-sm">REGISTER</a>
                                             </p>
                                         </div>
 
@@ -363,7 +364,7 @@
                                             <p>
                                                 $645*
                                                 <span>Oct 1, 2016 – Jan 8, 2017</span>
-                                                <a href="http://www.regonline.com/iahsp2017conference" class="btn btn-primary btn-sm">REGISTER</a>
+                                                <a href="http://www.regonline.com/iahsp2017conference target="_blank"" class="btn btn-primary btn-sm">REGISTER</a>
                                             </p>
                                         </div>
 
@@ -372,7 +373,7 @@
                                             <p>
                                                 $725*
                                                 <span>Jan 9 – Feb 1</span>
-                                                <a href="http://www.regonline.com/iahsp2017conference" class="btn btn-primary btn-sm">REGISTER</a>
+                                                <a href="http://www.regonline.com/iahsp2017conference" target="_blank" class="btn btn-primary btn-sm">REGISTER</a>
                                             </p>
                                         </div>
                                     </div>
@@ -572,6 +573,11 @@
                             </div>
                         </div><!-- /col -->
                     </div><!-- /row -->
+
+                    <!-- Button Registration -->
+                    <div class="text-center space-top-40">
+                        <a class="btn btn-primary btn-lg" href="https://www.regonline.com/Register/Checkin.aspx?EventID=1872275" target="_blank"><strong>BE ONE OF OUR PREFERRED SPONSORS - CLICK HERE TO SIGN UP!</strong></a>
+                    </div>
                 </div><!-- /container -->
             </section>
 
@@ -864,16 +870,12 @@
 
         <!-- ONEPAGE NAVIGATION -->
         <script type="text/javascript" src="assets/template/plugins/jquery.nav.min.js"></script>
-        <script type="text/javascript">
-            jQuery('#topMain').onePageNav({
-                currentClass: 'active',
-                changeHash: false,
-                scrollSpeed: 750,
-                scrollThreshold: 0.5,
-                filter: ':not(.external)',
-                easing: 'easeInOutExpo'
-            });
-        </script>
+
+        <!-- ====================================================================
+            Additional & Custom Modules
+        ==================================================================== -->
+        <script type="text/javascript" src="assets/bower_components/enquire/dist/enquire.min.js"></script>
+        <script type="text/javascript" src="assets/js/custom.js"></script>
 
         <!-- ====================================================================
             Angular
@@ -881,6 +883,5 @@
         <script type="text/javascript" src="assets/bower_components/angular/angular.min.js"></script>
         <script type="text/javascript" src="assets/js/angular/app.js"></script>
         <!-- <script type="text/javascript" src=""></script> -->
-
     </body>
 </html>

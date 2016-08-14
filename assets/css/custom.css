@@ -1,6 +1,38 @@
+/* ===========================================================================
+    StagedHomes.com
+    Developer: Duane Leem, MSc
+    Email: duane@stagedhomes.com
+=========================================================================== */
+
+/* ===========================================================================
+    Intro
+=========================================================================== */
 .darken-main-parallax {
     opacity: 0.8;
     background; black;
+}
+
+/* Mobile L + */
+@media only screen and (max-width: 425px) {
+    #revolution-layer-3 {
+        z-index: 4;
+        white-space: normal;
+        width: 90%;
+
+        /* Font */
+        font-size: 350%;
+        line-height: 100%;
+    }
+}
+
+/* Tablet + */
+@media only screen and (min-width: 426px) {
+    #revolution-layer-3 {
+        z-index: 4;
+        white-space: normal;
+        width: 90%;
+        font-size: x-large;
+    }
 }
 
 
@@ -15,12 +47,27 @@
     vertical-align: middle;
 }
 
+
+/* ===========================================================================
+    Registration Fees
+=========================================================================== */
+.lead > ul > li { color: black; }
+#pricing > .container > .lead > p { color: black; }
+#pricing > .container > div > div > p { color: black; }
+
+
 /* ===========================================================================
     Footer
 =========================================================================== */
 footer .column.logo {
     background: white;
 }
+
+
+/* ===========================================================================
+    Default Components
+=========================================================================== */
+
 
 
 /* ===========================================================================
