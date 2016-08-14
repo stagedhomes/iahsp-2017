@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
 <!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
-<!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
-    <head ng-app="iahsp2017">
+<!--[if gt IE 9]><!-->  <html ng-app="iahsp2017"> <!--<![endif]-->
+    <head>
         <meta charset="utf-8" />
         <title>2017 Educational Conference and EXPO</title>
         <meta name="keywords" content="IAHSP, StagedHomes.com, Home Staging Education" />
@@ -36,6 +36,9 @@
 
         <!-- Vertical Timeline -->
         <link rel="stylesheet" type="text/css" href="assets/template/vertical-timeline/css/component.css" />
+
+        <!-- Google reCAPTCHA -->
+        <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
 
         <!-- Overrides -->
         <link href="assets/css/custom.css" rel="stylesheet" />
@@ -82,13 +85,11 @@
         <span id="header_shadow"></span>
         <!-- /TOP NAV -->
 
-
-
         <!-- WRAPPER -->
         <div id="wrapper">
 
             <!-- REVOLUTION SLIDER -->
-            <div class="fullscreenbanner-container">
+            <section class="fullscreenbanner-container">
                 <div class="fullscreenbanner" >
                     <ul>
 
@@ -153,10 +154,8 @@
                     </ul>
                     <div class="tp-bannertimer"></div>
                 </div>
-            </div>
+            </section>
             <!-- /REVOLUTION SLIDER -->
-
-
 
             <!-- KEYNOTE -->
             <section id="keynote" class="padding100">
@@ -201,8 +200,6 @@
                 </div>
             </section>
             <!-- /KEYNOTE -->
-
-
 
             <!-- PARALLAX -->
             <section id="hotel" class="parallax delayed" data-stellar-background-ratio="0.7" style="background-image: url('assets/images/section-hotel-background.jpg'); background-size: cover;">
@@ -255,8 +252,6 @@
                 </div>
             </section>
             <!-- /PARALLAX -->
-
-
 
             <!-- REGISTRATION FEES -->
             <section id="pricing" class="padding100 special-row">
@@ -661,7 +656,7 @@
             <!-- /Schedule and Planned Topics -->
 
             <!-- CONTACT -->
-            <section id="contact" class="padding100 margin-footer">
+            <section id="contact" class="padding100 margin-footer" ng-controller="ctrlSendEmail">
                 <div class="container">
 
                     <h1 class="text-center">Contact Us <strong><em>Today!</em></strong></h1>
@@ -676,16 +671,25 @@
 
                             <h2>If you have questions about the IAHSP 2017 Educational Conference, just send us a message in the form below with any questions you may have.</h2>
 
-                            <form class="white-row" action="#" method="post">
+                            <form role="form" name="formContactUs" class="white-row" novalidate="">
                                 <div class="row">
                                     <div class="form-group">
                                         <div class="col-md-6">
                                             <label>Full Name *</label>
-                                            <input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name">
+                                            <input type="text" class="form-control" maxlength="100"
+                                                ng-class="{ 'has-error': formContactUs.frmName.$error.required && !formContactUs.frmName.$pristine }"
+                                                id="frmName"
+                                                ng-model="contactDetails.name"
+                                                required
+                                            /><!-- /frmName -->
                                         </div>
                                         <div class="col-md-6">
                                             <label>E-mail Address *</label>
-                                            <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email">
+                                            <input type="email" class="form-control" maxlength="100"
+                                                id="frmEmail"
+                                                ng-model="contactDetails.email"
+                                                required
+                                            /><!-- /frmEmail -->
                                         </div>
                                     </div>
                                 </div>
@@ -693,7 +697,12 @@
                                     <div class="form-group">
                                         <div class="col-md-12">
                                             <label>Subject</label>
-                                            <input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="subject" id="subject">
+                                            <input type="text" class="form-control" maxlength="100"
+                                                ng-class="{ 'has-error': formContactUs.frmSubject.$error.required && !formContactUs.frmSubject.$pristine }"
+                                                id="frmSubject"
+                                                ng-model="contactDetails.subject"
+                                                required
+                                            /><!-- /frmSubject -->
                                         </div>
                                     </div>
                                 </div>
@@ -701,7 +710,11 @@
                                     <div class="form-group">
                                         <div class="col-md-12">
                                             <label>Message *</label>
-                                            <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message"></textarea>
+                                            <textarea id="frmMessage" rows="10" maxlength="5000" class="form-control"
+                                                ng-class="{ 'has-error': formContactUs.frmMessage.$error.required && !formContactUs.frmMessage.$pristine }"
+                                                ng-model="contactDetails.message"
+                                                required
+                                            ></textarea><!-- /frmMessage -->
                                         </div>
                                     </div>
                                 </div>
@@ -710,7 +723,20 @@
 
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <input type="submit" value="Send Message" class="btn btn-primary btn-lg" data-loading-text="Loading...">
+                                        <div vc-recaptcha key="'6Le-_AMTAAAAALK8HJZy0WyzIKsMp5T1sEvQNIYr'"></div>
+                                    </div>
+                                </div>
+
+                                <br />
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button type="button" class="btn btn-primary btn-lg" ng-click="fnClearForm();">Clear</button>
+                                        <button type="button" class="btn btn-primary btn-lg" id="submit"
+                                            ng-click="fnSendForm()"
+                                            ng-class="{'disabled': formContactUs.$invalid}"
+                                            ng-disabled="formContactUs.$invalid"
+                                        >Send Message</button>
                                     </div>
                                 </div>
                             </form>
@@ -881,7 +907,9 @@
             Angular
         ==================================================================== -->
         <script type="text/javascript" src="assets/bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="assets/bower_components/angular-recaptcha/release/angular-recaptcha.min.js"></script>
         <script type="text/javascript" src="assets/js/angular/app.js"></script>
-        <!-- <script type="text/javascript" src=""></script> -->
+        <script type="text/javascript" src="assets/js/angular/services.js"></script>
+        <script type="text/javascript" src="assets/js/angular/controllers.js"></script>
     </body>
 </html>

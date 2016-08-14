@@ -20,7 +20,8 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "^1.5.8",
+    "angular": "^1.5.7",
+    "angular-recaptcha": "^3.0.3",
     "enquire": "^2.1.2"
   }
 }
