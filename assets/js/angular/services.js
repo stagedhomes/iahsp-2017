@@ -6,10 +6,10 @@
 
             // Store all contents provided by guest.
             $facSendEmail.contact = {
-                "name": "Duane Leem",
-                "email": "duaneleem@alumni.ggu.edu",
-                "subject": "Test email.",
-                "message": "Just a test email."
+                "name": null,
+                "email": null,
+                "subject": null,
+                "message": null
             }; // contact
 
             // update submit button to indicate success
