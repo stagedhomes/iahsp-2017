@@ -4,6 +4,14 @@
 /* Mobile L + */
 enquire.register("screen and (max-width: 425px)", {
     match : function() {
+        // IAHSP
+        $("#revolution-layer-0")
+            .attr("data-hoffset", "0")
+            .attr("data-voffset", "0")
+            .attr("data-x", "center")
+            .attr("data-y", "-65")
+        ; // $("revolution-layer-1")
+
         // Title
         $("#revolution-layer-1")
             .attr("data-hoffset", "20")
@@ -29,6 +37,14 @@ enquire.register("screen and (max-width: 425px)", {
 // 426px +
 enquire.register("screen and (min-width: 426px)", {
     match : function() {
+        // IAHSP
+        $("#revolution-layer-0")
+            .attr("data-hoffset", "0")
+            .attr("data-voffset", "0")
+            .attr("data-x", "center")
+            .attr("data-y", "140")
+        ; // $("revolution-layer-1")
+
         // Title
         $("#revolution-layer-1")
             .attr("data-hoffset", "0")
