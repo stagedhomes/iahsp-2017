@@ -9,7 +9,7 @@
 =========================================================================== */
 .darken-main-parallax {
     opacity: 0.8;
-    background; black;
+    background: black;
 }
 
 /* Mobile L + */
@@ -53,8 +53,26 @@
 
 
 /* ===========================================================================
+    Speakers
+=========================================================================== */
+#speaker-modals > .modal {
+    padding-top: 0px;
+}
+
+
+/* ===========================================================================
     Vertical Timeline
 =========================================================================== */
+/* Paragraph */
+.item-box.fixed-box .item-box-desc p {
+    height: 50px;
+}
+
+/* Description Box */
+.item-box.fixed-box .item-box-desc {
+    height: 230px;
+}
+
 .cbp_tmtimeline > li .cbp_tmtime span:last-child {
     font-size: 2em;
 }
@@ -81,14 +99,9 @@ footer .column.logo {
 
 
 /* ===========================================================================
-    Default Components
-=========================================================================== */
-
-
-
-/* ===========================================================================
     Common Components
 =========================================================================== */
+.space-top-10 { margin-top: 10px; }
 .space-top-20 { margin-top: 20px; }
 .space-top-40 { margin-top: 40px; }
 .space-bottom-20 { margin-bottom: 20px; }
@@ -98,4 +111,5 @@ footer .column.logo {
 
 .text-valign-middle { vertical-align: middle !important; }
 .text-white { color: #ffffff; }
+.text-light-blue { color: #00B0F0; }
 .text-bold { font-weight: bold; }
