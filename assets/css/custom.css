@@ -65,12 +65,12 @@
 =========================================================================== */
 /* Paragraph */
 .item-box.fixed-box .item-box-desc p {
-    height: 50px;
+    height: 110px;
 }
 
 /* Description Box */
 .item-box.fixed-box .item-box-desc {
-    height: 230px;
+    height: 290px;
 }
 
 .cbp_tmtimeline > li .cbp_tmtime span:last-child {
