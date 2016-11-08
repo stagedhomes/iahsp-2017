@@ -60,8 +60,40 @@
 }
 
 /* ===========================================================================
-    IAHSP-CC
+    Premier Platinum Sponsor
 =========================================================================== */
+.tp-bannershadow.tp-shadow1 {
+    background: none;
+}
+
+#premier-platinum {
+    margin-top: -60px;
+    border-bottom: thin solid #C6C6C6;
+
+    padding: 30px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    #premier-platinum > div > div > div.col-md-8 { top: 0px; }
+
+    /* Font size of title. */
+    #premier-platinum h2 { 
+        font-size: 2.5em;
+        text-align: center;
+    }
+}
+
+/* Laptops, Desktops, Large Screens */
+@media (min-width: 1025px) {
+    #premier-platinum > div > div > div.col-md-8 { top: 35px; }
+
+    /* Font size of title. */
+    #premier-platinum h2 { 
+        font-size: 2.5em;
+    }
+}
+
 
 
 
