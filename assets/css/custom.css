@@ -22,7 +22,7 @@
         text-align: center;
     }
 
-    #revolution-layer-3 {
+    #revolution-layer-3, #revolution-layer-1-2 {
         z-index: 4;
         white-space: normal;
         width: 90%;
@@ -43,7 +43,7 @@
         text-align: center;
     }
 
-    #revolution-layer-3 {
+    #revolution-layer-3, #revolution-layer-1-2 {
         z-index: 4;
         white-space: normal;
         width: 90%;
