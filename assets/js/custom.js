@@ -11,7 +11,7 @@ enquire.register("screen and (max-width: 425px)", {
             .attr("data-hoffset", "0")
             .attr("data-voffset", "0")
             .attr("data-x", "center")
-            .attr("data-y", "-65")
+            .attr("data-y", "-295")
         ; // $("revolution-layer-1")
 
         // Title
@@ -31,7 +31,7 @@ enquire.register("screen and (max-width: 425px)", {
         // Verbiage
         $("#revolution-layer-3")
             .attr("data-hoffset", "20")
-            .attr("data-voffset", "175")
+            .attr("data-voffset", "190")
         ; // $("revolution-layer-3")
     }
 });
@@ -46,7 +46,7 @@ enquire.register("screen and (min-width: 426px)", {
             .attr("data-hoffset", "0")
             .attr("data-voffset", "0")
             .attr("data-x", "center")
-            .attr("data-y", "140")
+            .attr("data-y", "90")
         ; // $("revolution-layer-1")
 
         // Title
@@ -54,32 +54,18 @@ enquire.register("screen and (min-width: 426px)", {
             .attr("data-hoffset", "0")
             .attr("data-voffset", "0")
             .attr("data-x", "center")
-            .attr("data-y", "200")
+            .attr("data-y", "270")
+        ; // $("revolution-layer-1")
+
+        $("#revolution-layer-2")
+            .attr("data-hoffset", "0")
+            .attr("data-voffset", "30")
         ; // $("revolution-layer-1")
 
         // Verbiage
         $("#revolution-layer-3")
             .attr("data-hoffset", "20")
-            .attr("data-voffset", "-150")
-        ; // $("revolution-layer-3")
-
-        /* ------------------------------------------
-            2nd Slide
-        ------------------------------------------ */
-        // Logo
-        $("#revolution-layer-0-2")
-            .attr("data-hoffset", "0")
-            .attr("data-voffset", "0")
-            .attr("data-x", "center")
-            .attr("data-y", "140")
-        ; // $("revolution-layer-1")
-
-        // Verbiage
-        $("#revolution-layer-1-2")
-            .attr("data-hoffset", "0")
-            .attr("data-voffset", "100")
-            .attr("data-x", "center")
-            .attr("data-y", "400")
+            .attr("data-voffset", "-90")
         ; // $("revolution-layer-3")
     }
 });

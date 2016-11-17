@@ -14,12 +14,16 @@
 
 /* Mobile L + */
 @media only screen and (max-width: 425px) {
-    #revolution-layer-0 {
+    /*#revolution-layer-0 {
         z-index: 4;
         white-space: normal;
         width: 90%;
         font-size: 220%;
         text-align: center;
+    }*/
+
+    .logo-raisethebar {
+        width: 600px;
     }
 
     #revolution-layer-3, #revolution-layer-1-2 {
@@ -35,12 +39,16 @@
 
 /* Tablet + */
 @media only screen and (min-width: 426px) {
-    #revolution-layer-0 {
+    /*#revolution-layer-0 {
         z-index: 4;
         white-space: normal;
         width: 90%;
         font-size: 200%;
         text-align: center;
+    }*/
+
+    .logo-raisethebar {
+        width: 400px;
     }
 
     #revolution-layer-3, #revolution-layer-1-2 {
