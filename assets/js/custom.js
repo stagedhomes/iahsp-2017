@@ -1,8 +1,8 @@
 /* ==============================================================
     Slider Revolution
 ============================================================== */
-/* Mobile L + */
-enquire.register("screen and (max-width: 425px)", {
+/* Lower than 768px + */
+enquire.register("screen and (max-width: 767px)", {
     match : function() {
         /* ------------------------------------------
             1st Slide
@@ -31,7 +31,7 @@ enquire.register("screen and (max-width: 425px)", {
         // Verbiage
         $("#revolution-layer-3")
             .attr("data-hoffset", "20")
-            .attr("data-voffset", "190")
+            .attr("data-voffset", "220")
         ; // $("revolution-layer-3")
 
         /* ------------------------------------------
@@ -46,8 +46,8 @@ enquire.register("screen and (max-width: 425px)", {
     }
 });
 
-// 426px +
-enquire.register("screen and (min-width: 426px)", {
+// Tablet | 768px +
+enquire.register("screen and (min-width: 768px)", {
     match : function() {
         /* ------------------------------------------
             1st Slide
@@ -56,26 +56,26 @@ enquire.register("screen and (min-width: 426px)", {
             .attr("data-hoffset", "0")
             .attr("data-voffset", "0")
             .attr("data-x", "center")
-            .attr("data-y", "90")
-        ; // $("revolution-layer-1")
+            .attr("data-y", "0")
+        ; // $("revolution-layer-0")
 
         // Title
         $("#revolution-layer-1")
             .attr("data-hoffset", "0")
             .attr("data-voffset", "0")
             .attr("data-x", "center")
-            .attr("data-y", "270")
+            .attr("data-y", "180")
         ; // $("revolution-layer-1")
 
         $("#revolution-layer-2")
             .attr("data-hoffset", "0")
-            .attr("data-voffset", "30")
+            .attr("data-voffset", "-60")
         ; // $("revolution-layer-1")
 
         // Verbiage
         $("#revolution-layer-3")
             .attr("data-hoffset", "20")
-            .attr("data-voffset", "-90")
+            .attr("data-voffset", "-20")
         ; // $("revolution-layer-3")
 
         /* ------------------------------------------
@@ -89,6 +89,95 @@ enquire.register("screen and (min-width: 426px)", {
         ; // $("revolution-layer-1")
     }
 });
+
+// Laptop | 1024px +
+enquire.register("screen and (min-width: 1024px)", {
+    match : function() {
+        /* ------------------------------------------
+            1st Slide
+        ------------------------------------------ */
+        $("#revolution-layer-0")
+            .attr("data-hoffset", "0")
+            .attr("data-voffset", "0")
+            .attr("data-x", "center")
+            .attr("data-y", "50")
+        ; // $("revolution-layer-1")
+
+        // Title
+        $("#revolution-layer-1")
+            .attr("data-hoffset", "0")
+            .attr("data-voffset", "0")
+            .attr("data-x", "center")
+            .attr("data-y", "230")
+        ; // $("revolution-layer-1")
+
+        $("#revolution-layer-2")
+            .attr("data-hoffset", "0")
+            .attr("data-voffset", "-10")
+        ; // $("revolution-layer-1")
+
+        // Verbiage
+        $("#revolution-layer-3")
+            .attr("data-hoffset", "20")
+            .attr("data-voffset", "-50")
+        ; // $("revolution-layer-3")
+
+        /* ------------------------------------------
+            2nd Slide
+        ------------------------------------------ */
+        $("#revolution-layer-1-0")
+            .attr("data-hoffset", "0")
+            .attr("data-voffset", "0")
+            .attr("data-x", "center")
+            .attr("data-y", "center")
+        ; // $("revolution-layer-1")
+    }
+});
+
+// Desktop | 1440px +
+enquire.register("screen and (min-width: 1440px)", {
+    match : function() {
+        /* ------------------------------------------
+            1st Slide
+        ------------------------------------------ */
+        $("#revolution-layer-0")
+            .attr("data-hoffset", "0")
+            .attr("data-voffset", "0")
+            .attr("data-x", "center")
+            .attr("data-y", "50")
+        ; // $("revolution-layer-1")
+
+        // Title
+        $("#revolution-layer-1")
+            .attr("data-hoffset", "0")
+            .attr("data-voffset", "0")
+            .attr("data-x", "center")
+            .attr("data-y", "230")
+        ; // $("revolution-layer-1")
+
+        $("#revolution-layer-2")
+            .attr("data-hoffset", "0")
+            .attr("data-voffset", "-10")
+        ; // $("revolution-layer-1")
+
+        // Verbiage
+        $("#revolution-layer-3")
+            .attr("data-hoffset", "20")
+            .attr("data-voffset", "-110")
+        ; // $("revolution-layer-3")
+
+        /* ------------------------------------------
+            2nd Slide
+        ------------------------------------------ */
+        $("#revolution-layer-1-0")
+            .attr("data-hoffset", "0")
+            .attr("data-voffset", "0")
+            .attr("data-x", "center")
+            .attr("data-y", "center")
+        ; // $("revolution-layer-1")
+    }
+});
+
 
 /* ==============================================================
     Navigation Menu (navbar)
@@ -329,3 +418,8 @@ jQuery(document).ready(function() {
 	}
 
 });	//ready
+
+// Clicks the right arrow from HERO.
+function fnRevolutionNext() {
+    document.querySelector('.tp-rightarrow').click();
+} // fnRevolutionNext()
